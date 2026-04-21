@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F3"
+    android:orientation="vertical">
+    <!-- Panel superior compacto -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_orange_topbar"
+        android:orientation="vertical"
+        android:paddingBottom="14dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="12dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvTituloConfigurarPuntos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Configurar puntos"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/tvNombreRutaConfigurar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Ruta: —"
+                    android:textColor="#CCffffff"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnRecargarPuntos"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:background="@drawable/circle_deco_light"
+                android:backgroundTint="#33FFFFFF"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:stateListAnimator="@null"
+                android:text="↻ Recargar"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <!-- Hint -->
+        <TextView
+            android:id="@+id/tvInstruccionMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toca el mapa para agregar un punto a esta ruta"
+            android:textColor="#CCffffff"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- Mapa ocupa el resto -->
+    <fragment
+        android:id="@+id/mapConfigurarPuntos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        map:uiCompass="true"
+        map:uiZoomControls="true"/>
+</LinearLayout>

@@ -1,0 +1,49 @@
+# Archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos locales de Android Studio / IntelliJ
+*.iml
+.idea/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Archivos de propiedades locales (contienen rutas absolutas del equipo)
+local.properties
+
+# Google Services - contiene claves de Firebase/API (¡NO subir!)
+google-services.json
+
+# Gradle - archivos generados y caché
+.gradle/
+gradle/wrapper/gradle-wrapper.jar
+
+# Directorios de build (todos los módulos)
+build/
+app/build/
+*/build/
+
+# Kotlin session files
+.kotlin/
+
+# Archivos de captura y análisis
+/captures
+
+# Archivos de build nativo externo
+.externalNativeBuild/
+.cxx/
+
+# Archivos ProGuard generados
+*.map
+
+# Archivos de keystore (¡NUNCA subir al repositorio!)
+*.jks
+*.keystore
+
+# Archivos APK / AAB generados
+*.apk
+*.aab

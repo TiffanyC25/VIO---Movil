@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Prueba">
+
+        <!-- ── LAUNCHER: Login ── -->
+        <activity
+            android:name=".Login"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ── Auth ── -->
+        <activity
+            android:name=".Signup"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- ── Home (raíz post-login) ── -->
+        <activity
+            android:name=".HomeConductorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".HomeAdminActivity"
+            android:exported="false" />
+
+        <!-- ── Rutas ── -->
+        <activity
+            android:name=".CrearRutaActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- CrearRuta (clase legacy — mantener por compatibilidad) -->
+        <activity
+            android:name=".CrearRuta"
+            android:exported="false" />
+
+        <!-- ── Configurar puntos ── -->
+        <activity
+            android:name=".ListasRutasActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ConfigurarPuntosRutaActivity"
+            android:exported="false" />
+
+        <!-- ── Recorridos ── -->
+        <activity
+            android:name=".ListaRutasRecorridoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RecorridoRutaActivity"
+            android:exported="false" />
+
+        <!-- ── Historial ── -->
+        <activity
+            android:name=".HistorialRecorridosActivity"
+            android:exported="false" />
+
+        <!-- ── Usuario ── -->
+        <activity
+            android:name=".PerfilConductorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".PerfilAdminActivity"
+            android:exported="false" />
+
+        <!-- ── Mapa standalone ── -->
+        <activity
+            android:name=".Maps"
+            android:exported="false" />
+
+        <!-- ── Admin: lista y detalle de conductores ── -->
+        <activity
+            android:name=".ListaConductoresActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".HistorialConductorActivity"
+            android:exported="false" />
+
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAMBMLInKUf5ZtezofYnNXdliKpKA_4LoY" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/card_background"
+    android:layout_marginBottom="10dp">
+
+    <!-- Barra de estado -->
+    <View
+        android:id="@+id/viewBordeEstado"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/strip_green"/>
+
+    <!-- Cabecera (siempre visible) -->
+    <LinearLayout
+        android:id="@+id/layoutCabecera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="14dp">
+
+        <!-- Ícono de estado -->
+        <LinearLayout
+            android:id="@+id/layoutIconoEstado"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_icon_green"
+            android:gravity="center"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:id="@+id/tvIconoEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓"
+                android:textSize="16sp"
+                android:textColor="#30D158"/>
+        </LinearLayout>
+
+        <!-- Info principal -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Nombre ruta + badge estado -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:id="@+id/tvNombreRutaRecorrido"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ruta Norte"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A0800"/>
+
+                <TextView
+                    android:id="@+id/tvBadgeEstadoRecorrido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Completado"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#1D9B3C"
+                    android:background="@drawable/bg_badge_success"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"/>
+            </LinearLayout>
+
+            <!-- Fecha -->
+            <TextView
+                android:id="@+id/tvFechaRecorrido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📅 25 Mar · 08:30"
+                android:textSize="12sp"
+                android:textColor="#B0978E"/>
+        </LinearLayout>
+
+        <!-- Flecha expandir/colapsar -->
+        <TextView
+            android:id="@+id/tvFlecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="22sp"
+            android:textColor="#D0C0B8"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Métricas (siempre visibles) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_icon_orange"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏱"
+                android:textSize="13sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DURACIÓN"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                android:textColor="#B0978E"
+                android:letterSpacing="0.06"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvDuracionRecorrido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#1A0800"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_icon_amber"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍"
+                android:textSize="13sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PUNTOS"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                android:textColor="#B0978E"
+                android:letterSpacing="0.06"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvPuntosRecorrido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#1A0800"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_icon_blue"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅"
+                android:textSize="13sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COBERTURA"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                android:textColor="#B0978E"
+                android:letterSpacing="0.06"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvCoberturaPuntos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#1A0800"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Detalle de puntos (visible sólo al expandir) -->
+    <LinearLayout
+        android:id="@+id/layoutDetallePuntos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="12dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0E0D6"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DETALLE POR PUNTO"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#B0978E"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Los puntos se agregan dinámicamente aquí -->
+        <LinearLayout
+            android:id="@+id/containerPuntos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </LinearLayout>
+</LinearLayout>

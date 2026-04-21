@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/card_background"
+    android:layout_marginBottom="10dp">
+
+    <!-- Borde izquierdo naranja -->
+    <View
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/strip_orange"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="14dp">
+
+        <!-- Avatar con iniciales -->
+        <LinearLayout
+            android:id="@+id/layoutAvatar"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/circle_deco_light"
+            android:backgroundTint="#FFD0A8"
+            android:gravity="center"
+            android:layout_marginEnd="14dp">
+
+            <TextView
+                android:id="@+id/tvInicialesConductor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Nombre, correo, teléfono -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNombreConductor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre Conductor"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#1A0800"/>
+
+            <TextView
+                android:id="@+id/tvEmailConductor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="correo@ejemplo.com"
+                android:textSize="12sp"
+                android:textColor="#B0978E"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/tvTelefonoConductor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="—"
+                android:textSize="12sp"
+                android:textColor="#B0978E"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="22sp"
+            android:textColor="#D0C0B8"/>
+
+    </LinearLayout>
+</LinearLayout>
